@@ -5,7 +5,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    patterns: './src/app.js'
+    patterns: './src'
   },
   output: {
     filename: '[name].min.js',

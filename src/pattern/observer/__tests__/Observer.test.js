@@ -1,4 +1,4 @@
-import Observer from '../Observer.js'
+import Observer from '../Observer'
 
 
 describe('Test Observer', () => {
