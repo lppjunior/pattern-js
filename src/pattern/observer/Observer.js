@@ -13,8 +13,8 @@ class Observer {
     return this
   }
 
-  emit (event, value) {
-    this.observer[event].forEach(callback => callback(value))
+  emit (event, data) {
+    this.observer[event].forEach(callback => callback(data))
   }
 }
 
