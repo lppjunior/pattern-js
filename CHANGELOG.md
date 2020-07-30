@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2020-07-30
+### Update
+- Add Observer parameter validations
+- Add Observer tests
+- Update jest to 100% code coverage
+### Fixbug
+- Fix initialize event on subscribe or emit call
+
 ## [1.0.1] - 2020-07-29
 ### Added
 - Update project import references
