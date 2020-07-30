@@ -1,6 +1,6 @@
 {
   "name": "pattern-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pattern JS project is a collection of pattern implemented in JS",
   "private": true,
   "main": "index.js",
