@@ -6,9 +6,10 @@ See many characteristics of this library:
 - All pattern hav 100% coverage unity tests and confiability.
 - Use 100% native javascript to write this code
 
-| Available Patterns   |
-|----------------------|
-| [Observer](Observer) |
+| Available Patterns       |
+|--------------------------|
+| [Observer](Observer)     |
+| [Middleware](Middleware) |
 
 ## Observer
 The instance (or model) maintains a collection of objects (observers) and will notify them of any changes in their state.
@@ -30,6 +31,36 @@ class Observer() {
   observer.on('test', (data) => console.log('Test 2 > ', data)) // result: Test 2 > Observer emit successful
 
   observer.emit('test', { status: 'Observer emit successful' })
+```
+
+## Middleware
+A single implementation of Middleware pattern
+
+**Class structure**
+```js
+class Middleware() {
+    use(callback: function)
+    process(...data: object)
+}
+```
+
+## Example
+
+```js
+  const middleware = new Middleware()
+
+  middleware.use((param1, param2, param3, next) => {
+    param1 = 'param 1 UPDATED'
+    console.log('Execution 1', param1, param2, param3)
+    next()
+  })
+
+  middleware.use((param1, param2, param3, next) => {
+    console.log('Execution 2', param1, param2, param3) // param1 = 'param 1 UPDATED'
+    next()
+  })
+
+  middleware.process('param 1', 'param 2', 'param 3')
 ```
 
 ## Versioning
