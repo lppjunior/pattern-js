@@ -9,15 +9,11 @@ class Middleware {
   }
 
   process (...data) {
-    let iterator = 0
-
-    const next = () => {
-      if (iterator < this.middlewares.length) {
-        this.middlewares[iterator++](...data, next)
-      }
+    const next = (iterator) => {
+      this.middlewares[iterator] && this.middlewares[iterator].apply(null, [...data, () => next(iterator + 1)])
     }
 
-    next()
+    next(0)
   }
 }
 

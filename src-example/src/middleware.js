@@ -1,20 +1,18 @@
 function testMiddleware () {
   const middleware = new Middleware()
   middleware.use((param1, param2, next) => {
-    param1.test += ' UPDATED'
-    console.log('[middleware] ', param1, param2)
-    next(param1, param2)
+    console.log('[middleware] 1 ', param1, param2)
+    next()
   })
 
   middleware.use((param1, param2, next) => {
-    param2 = param2 + ' UPDATED'
-    console.log('[middleware] ', param1, param2)
-    next(param1, param2)
+    console.log('[middleware] 2 ', param1, param2)
+    next()
   })
 
   middleware.use((param1, param2, next) => {
-    console.log('[middleware] ', param1, param2)
-    next(param1, param2)
+    console.log('[middleware] 3 ', param1, param2)
+    next()
   })
 
   middleware.process({ test: 123, value: 'aaa' }, 'test')
