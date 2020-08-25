@@ -8,30 +8,9 @@ See many characteristics of this library:
 
 | Available Patterns       |
 |--------------------------|
-| [Observer](Observer)     |
-| [Middleware](Middleware) |
-
-## Observer
-The instance (or model) maintains a collection of objects (observers) and will notify them of any changes in their state.
-
-**Class structure**
-```js
-class Observer() {
-    on(event: string, callback: function)
-    emit(event: string, data: object)
-}
-```
-
-## Example
-
-```js
-  const observer = new Observer()
-
-  observer.on('test', (data) => console.log(data)) // result: Observer emit successful
-  observer.on('test', (data) => console.log('Test 2 > ', data)) // result: Test 2 > Observer emit successful
-
-  observer.emit('test', { status: 'Observer emit successful' })
-```
+| [Middleware](#Middleware) |
+| [Observer](#Observer)     |
+| [Pipeline](#Pipeline)     |
 
 ## Middleware
 A single implementation of Middleware pattern
@@ -61,6 +40,50 @@ class Middleware() {
   })
 
   middleware.process('param 1', 'param 2', 'param 3')
+```
+
+## Observer
+The instance (or model) maintains a collection of objects (observers) and will notify them of any changes in their state.
+
+**Class structure**
+```js
+class Observer() {
+    on(event: string, callback: function)
+    emit(event: string, data: object)
+}
+```
+
+## Example
+
+```js
+  const observer = new Observer()
+
+  observer.on('test', (data) => console.log(data)) // result: Observer emit successful
+  observer.on('test', (data) => console.log('Test 2 > ', data)) // result: Test 2 > Observer emit successful
+
+  observer.emit('test', { status: 'Observer emit successful' })
+```
+
+## Pipeline
+A Pipeline pattern implementation
+
+**Class structure**
+```js
+class Pipeline() {
+    pipe(callback: function)
+    process(data: object)
+}
+```
+
+## Example
+
+```js
+  const result = (new Pipeline())
+    .pipe((data) => data + 5)
+    .pipe((data) => data * 20)
+    .pipe((data) => data / 2)
+    .process(5) // result 100
+
 ```
 
 ## Versioning

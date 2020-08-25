@@ -8,7 +8,7 @@ module.exports = {
     patterns: './src'
   },
   output: {
-    filename: '[name].min.js',
+    filename: 'src/[name].min.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd'
   },
@@ -22,7 +22,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'src-example/main.js', to: '' }
+        path.resolve(__dirname, 'src-example', 'src')
       ]
     })
   ],
