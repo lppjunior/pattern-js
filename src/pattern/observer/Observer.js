@@ -15,7 +15,7 @@ class Observer {
     this.observer[event].forEach(callback => callback(data))
   }
 
-  addEvent(event) {
+  addEvent (event) {
     if (this.observer[event] === undefined) {
       this.observer[event] = []
     }
