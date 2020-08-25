@@ -39,24 +39,12 @@ describe('Test Middleware call perfect scenaries', () => {
       expect(data).toEqual(expect.any(Object))
     })
 
-    test('should assert data.fullName is Equals "Full Name"', () => {
-      expect(data.fullName).toEqual('Full Name')
-    })
-
-    data.firstName = data.fullName.split(' ')[0]
-
     next()
   })
 
   middleware.use((data1, data, next) => {
-
-    console.log(data1)
     test('should assert is added property "firstName" to data object', () => {
-      expect(data.firstName).toBe('Full')
-    })
-
-    test('should assert is added property "firstName" to data object', () => {
-      expect(data.firstName).toBe('Full')
+      expect(data.fullName).toBe('Full Name')
     })
 
     next()
