@@ -1,5 +1,5 @@
 # pattern-js
-![version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.2.0&x2=0)
+![version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.3.0&x2=0)
 
 Pattern js was created to supply the need to centralize all types of patterns that i will use in my projects.
 
