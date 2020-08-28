@@ -8,7 +8,7 @@ const config = {}
 const process = [
   {
     ...config,
-    name: "all",
+    name: 'all',
     entry: {
       patterns: './src'
     },
@@ -20,7 +20,7 @@ const process = [
   },
   {
     ...config,
-    name: "unity",
+    name: 'unity',
     entry: {
       middleware: './src/pattern/middleware',
       pipeline: './src/pattern/pipeline',
