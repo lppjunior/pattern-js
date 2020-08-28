@@ -22,9 +22,9 @@ const process = [
     ...config,
     name: 'unity',
     entry: {
-      middleware: './src/pattern/middleware',
-      pipeline: './src/pattern/pipeline',
-      observer: './src/pattern/observer'
+      middleware: './src/middleware',
+      pipeline: './src/pipeline',
+      observer: './src/observer'
     },
     output: {
       filename: 'src/pattern/[name].min.js',
