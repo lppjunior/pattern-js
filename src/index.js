@@ -1,6 +1,6 @@
-import Middleware from './pattern/middleware'
-import Observer from './pattern/observer'
-import Pipeline from './pattern/pipeline'
+import Middleware from './middleware'
+import Observer from './observer'
+import Pipeline from './pipeline'
 
 export {
   Middleware,
