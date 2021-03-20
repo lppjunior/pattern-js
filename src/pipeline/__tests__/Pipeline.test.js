@@ -18,7 +18,6 @@ describe('Pipeline', () => {
   })
 
   describe('Test Pipeline call all methods', () => {
-
     test('should assert method pipeline.pipe was called', () => {
       jest.spyOn(pipeline, 'pipe')
       pipeline.pipe(() => {})
