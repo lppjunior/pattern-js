@@ -1,4 +1,4 @@
-# pattern-js
+# @lppjunior/pattern-js
 ![version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.3.0&x2=0)
 
 Pattern js was created to supply the need to centralize all types of patterns that i will use in my projects.
@@ -6,6 +6,11 @@ Pattern js was created to supply the need to centralize all types of patterns th
 See many characteristics of this library:
 - All pattern hav 100% coverage unity tests and confiability.
 - Use 100% native javascript to write this code
+
+# Install
+```js
+yarn add @lppjunior/pattern-js
+```
 
 ## Available Patterns
 | Pattern | Description|
